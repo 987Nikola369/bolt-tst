@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-[#231F20] text-white;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[#E41E12] rounded-full;
+}
+
+/* Glassmorphism effects */
+.glass {
+  @apply bg-opacity-20 backdrop-blur-lg backdrop-filter;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Interactive elements */
+.hover-effect {
+  @apply transition-colors duration-200 ease-in-out;
+}
+
+.hover-effect-scale {
+  @apply transition-transform duration-200 ease-in-out hover:scale-105;
+}
+
+/* Form element styling */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  @apply bg-gray-800 border-gray-700 text-white shadow-sm focus:border-[#E41E12] focus:ring focus:ring-[#E41E12] focus:ring-opacity-50 rounded-md px-3 py-2 w-full hover-effect;
+}
+
+button {
+  @apply rounded-md;
+}
